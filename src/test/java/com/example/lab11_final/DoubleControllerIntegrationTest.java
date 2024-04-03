@@ -20,7 +20,7 @@ public class DoubleControllerIntegrationTest {
     @Test
     public void testDoubleNumberEnd(){
         int inputNumber = 5;
-        int expectedDouble = inputNumber *2;
+        int expectedDouble = 10;
 
         ResponseEntity<Integer> responseEntity = restTemplate.getForEntity("http://localhost:" + port + "/double?number=" + inputNumber, Integer.class);
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
